@@ -8,7 +8,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <h2>Video Demonstration</h2>
 
-- ### [YouTube: Azure Setup](https://youtu.be/yN8ruyLBHbM)
+- ### [YouTube: Azure Setup](https://youtu.be/_UdS9Mp0wXY)
 
 <h2>Environments and Technologies Used</h2>
 
