@@ -104,5 +104,6 @@ Configuring the Azure environment for Active Directory.<br />
 <img src="https://i.imgur.com/VyZClrZ.jpeg" height="80%" width="80%" alt="pinged"/>
 </p>
 <p>
--Ping the Domain VM's private IP again to confirm the client VM has local network access to it.
+-Ping the Domain VM's private IP again to confirm the client VM has local network access to it.<p></p>
+-It should now succeed, and we can move onto Installing AD
 <br />
