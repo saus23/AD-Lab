@@ -2,8 +2,8 @@
 <img src="https://i.imgur.com/pU5A58S.png" alt="Microsoft Active Directory Logo"/>
 </p>
 
-<h1>On-premises Active Directory Deployed in the Cloud (Azure)</h1>
-On-premises Active Directory implementation with Azure Virtual Machines.<br />
+<h1>Active Directory Azure configuration</h1>
+Configuring the Azure environment for Active Directory.<br />
 
 
 <h2>Video Demonstration</h2>
@@ -42,16 +42,23 @@ On-premises Active Directory implementation with Azure Virtual Machines.<br />
 -The server VM will be our domain controller and win 10 the client.
 </p>
 <br />
+<p> &emsp; </p>
+<p> &emsp; </p>
 
+  
 <p>
 <img src="https://i.imgur.com/Gb9fqcg.png" height="80%" width="80%" alt="static-IP"/>
 </p>
 <p>
--Set the Domain Controller VM's IP to be static since it will be the DNS server for our client<p></p>
+-Set the Domain Controller VM's IP to be static since it will be the DNS server for our client.<p></p>
 [VM -> networking -> network settings -> NIC -> ipconfig1 -> static & save] <p></p>
--Take note of the domain controller's private IP
+-Take note of the domain controller's private IP.
 </p>
 <br />
+<p> &emsp; </p>
+<p> &emsp; </p>
+
+
 
 <p>
 <img src="https://i.imgur.com/Karf5lO.png" height="80%" width="80%" alt="setting-dns"/>
@@ -63,21 +70,28 @@ On-premises Active Directory implementation with Azure Virtual Machines.<br />
 -Restart the client VM to make sure changes went through.
 </p>
 <br />
+<p> &emsp; </p>
+<p> &emsp; </p>
+
+
 
 <p>
 <img src="https://i.imgur.com/m9w94e4.jpeg" height="80%" width="80%" alt="firewall-rule"/>
 </p>
 <p>
 -Boot the VMs and attempt to ping the domain VM's private IP from the client. (It will fail)<p></p>
--We need to allow ICMPv4 traffic from the clients private IP.
+-We need to allow ICMPv4 traffic from the clients private IP.<p></p>
 [run -> "wf.msc" -> inbound rules -> new rule -> custom -> all programs -> protocol ICMPv4 -> remote = client's private]
 </p>
 <br />
+<p> &emsp; </p>
+<p> &emsp; </p>
+
+
 
 <p>
 <img src="https://i.imgur.com/VyZClrZ.jpeg" height="80%" width="80%" alt="pinged"/>
 </p>
 <p>
 -Re-ping the Domain VM's private IP to confirm the client VM has local network access to it.
-</p>
 <br />
