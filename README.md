@@ -91,6 +91,7 @@ Configuring the Azure environment for Active Directory.<br />
 <p>
 -Boot the VMs and attempt to ping the domain VM's private IP from the client (It will fail). <p></p>
 -Allow ICMPv4 traffic from the clients private IP.<p></p>
+(on domain machine)<p>
 [run -> "wf.msc" -> inbound rules -> new rule -> custom -> all programs -> protocol ICMPv4 -> remote = client's private]
 </p>
 <br />
