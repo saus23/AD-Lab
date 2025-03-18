@@ -56,6 +56,8 @@ This tutorial outlines the implementation of on-premises Active Directory within
 </p>
 <br />
 <p> &emsp; </p>
+<p> &emsp; </p>
+
 
 
 
@@ -80,6 +82,8 @@ Syntax: [user@domain.local] or [domain.local\user] <p></p>
 </p>
 <br />
 <p> &emsp; </p>
+<p> &emsp; </p>
+
 
 
 
