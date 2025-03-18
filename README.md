@@ -3,7 +3,7 @@
 </p>
 
 <h1>On-premises Active Directory Deployed in the Cloud (Azure)</h1>
-This tutorial outlines the implementation of on-premises Active Directory within Azure Virtual Machines.<br />
+On-premises Active Directory implementation with Azure Virtual Machines.<br />
 
 
 <h2>Video Demonstration</h2>
@@ -16,6 +16,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - Remote Desktop
 - Active Directory Domain Services
 - PowerShell
+- Windows Firewall
 
 <h2>Operating Systems Used </h2>
 
@@ -24,33 +25,59 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <h2>High-Level Deployment and Configuration Steps</h2>
 
-- Step 1
-- Step 2
-- Step 3
-- Step 4
+- create resource group
+- create virtual network
+- create VMs
+- make firewall rule
+- test local network
 
 <h2>Deployment and Configuration Steps</h2>
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/UbUIUev.png" height="80%" width="80%" alt="VMs"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+-Make a resource group, then add a virtual network onto it.<p></p>
+-Create a windows server VM and a windows 10 VM in the resource group, both using the VNet created earlier.<p></p>
+-The server VM will be our domain controller and win 10 the client.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/Gb9fqcg.png" height="80%" width="80%" alt="static-IP"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+-Set the Domain Controller VM's IP to be static since it will be the DNS server for our client<p></p>
+[VM -> networking -> network settings -> NIC -> ipconfig1 -> static & save] <p></p>
+-Take note of the domain controller's private IP
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/Karf5lO.png" height="80%" width="80%" alt="setting-dns"/>
+</p>
+<p>
+-Make the client's IP static as well, we will allow firewall traffic from its IP address later.<p></p>
+-Set the client's DNS settings to point to DC's private address.<p></p>
+[VM -> networking -> network settings -> NIC -> DNS servers -> custom -> <DC's private> & save]<p></p>
+-Restart the client VM to make sure changes went through.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/m9w94e4.jpeg" height="80%" width="80%" alt="firewall-rule"/>
+</p>
+<p>
+-Boot the VMs and attempt to ping the domain VM's private IP from the client. (It will fail)<p></p>
+-We need to allow ICMPv4 traffic from the clients private IP.
+[run -> "wf.msc" -> inbound rules -> new rule -> custom -> all programs -> protocol ICMPv4 -> remote = client's private]
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/VyZClrZ.jpeg" height="80%" width="80%" alt="pinged"/>
+</p>
+<p>
+-Re-ping the Domain VM's private IP to confirm the client VM has local network access to it.
 </p>
 <br />
