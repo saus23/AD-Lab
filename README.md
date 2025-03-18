@@ -4,11 +4,15 @@
 
 <h1>Active Directory Azure configuration</h1>
 Configuring the Azure environment for Active Directory.<br />
+<p> &emsp; </p>
+
 
 
 <h2>Video Demonstration</h2>
 
 - ### [YouTube: Azure Setup](https://youtu.be/_UdS9Mp0wXY)
+<p> &emsp; </p>
+
 
 <h2>Environments and Technologies Used</h2>
 
@@ -17,11 +21,15 @@ Configuring the Azure environment for Active Directory.<br />
 - Active Directory Domain Services
 - PowerShell
 - Windows Firewall
+<p> &emsp; </p>
+
 
 <h2>Operating Systems Used </h2>
 
 - Windows Server 2022
 - Windows 10 (21H2)
+<p> &emsp; </p>
+
 
 <h2>High-Level Deployment and Configuration Steps</h2>
 
@@ -30,6 +38,8 @@ Configuring the Azure environment for Active Directory.<br />
 - create VMs
 - make firewall rule
 - test local network
+<p> &emsp; </p>
+
 
 <h2>Deployment and Configuration Steps</h2>
 
@@ -93,5 +103,5 @@ Configuring the Azure environment for Active Directory.<br />
 <img src="https://i.imgur.com/VyZClrZ.jpeg" height="80%" width="80%" alt="pinged"/>
 </p>
 <p>
--Re-ping the Domain VM's private IP to confirm the client VM has local network access to it.
+-Pping the Domain VM's private IP to confirm the client VM has local network access to it.
 <br />
