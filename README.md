@@ -62,6 +62,8 @@ Configuring the Azure environment for Active Directory.<br />
 <p>
 -Set the Domain Controller VM's IP to be static since it will be the DNS server for our client.<p></p>
 [VM -> networking -> network settings -> NIC -> ipconfig1 -> static & save] <p></p>
+<p> &emsp; </p>
+
 -Take note of the domain controller's private IP.
 </p>
 <br />
@@ -77,6 +79,8 @@ Configuring the Azure environment for Active Directory.<br />
 -Make the client's IP static as well, we will allow firewall traffic from its IP address later.<p></p>
 -Set the client's DNS settings to point to DC's private address.<p></p>
 [VM -> networking -> network settings -> NIC -> DNS servers -> custom -> <DC's private> & save]<p></p>
+<p> &emsp; </p>
+
 -Restart the client VM to make sure changes went through.
 </p>
 <br />
@@ -93,6 +97,7 @@ Configuring the Azure environment for Active Directory.<br />
 -Allow ICMPv4 traffic from the clients private IP.<p></p>
 (on domain machine)<p>
 [run -> "wf.msc" -> inbound rules -> new rule -> custom -> all programs -> protocol ICMPv4 -> remote = client's private]
+
 </p>
 <br />
 <p> &emsp; </p>
