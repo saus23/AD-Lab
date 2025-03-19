@@ -2,7 +2,7 @@
 <img src="https://i.imgur.com/pU5A58S.png" alt="Microsoft Active Directory Logo"/>
 </p>
 
-<h1>On-premises Active Directory Deployed in the Cloud (Azure)</h1>
+<h1>Group Policy Objects and Organizational Units</h1>
 This tutorial demonstrates Organizational Units & Group Policy Objects usage.<br />
 <p> &emsp; </p>
 
