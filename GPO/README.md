@@ -3,7 +3,7 @@
 </p>
 
 <h1>Group Policy Objects and Organizational Units</h1>
-This tutorial demonstrates Organizational Units & Group Policy Objects usage.<br />
+Organizational Units & Group Policy Objects usage.<br />
 <p> &emsp; </p>
 
 
