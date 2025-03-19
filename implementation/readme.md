@@ -3,7 +3,7 @@
 </p>
 
 <h1>Active Directory Implementation (Azure)</h1>
-This tutorial outlines the implementation of on-premises Active Directory within Azure Virtual Machines.<br />
+On-premises Active Directory implementation within Azure Virtual Machines.<br />
 
 <p> &emsp; </p>
 
