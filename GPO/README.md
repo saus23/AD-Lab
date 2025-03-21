@@ -65,7 +65,9 @@ Organizational Units & Group Policy Objects usage.<br />
 -Add the members of the team OU to the team_sec group, and repeat for the admin_sec group.<p></p>
 -Go back to the C: drive and set the new sec groups to their respective folders.<p></p>
 [right-click -> security -> edit -> add -> (sec group)] & set allow Full control.<p>
-and again in the sharing tab [advanced sharing -> permissions -> add -> (sec group)]
+and again in the sharing tab [advanced sharing -> permissions -> add -> (sec group)]<p></p>
+<p> &emsp; </p>
+-Restart the client for access to the new folders ("pgupdate /force" may work but I had no luck with it here).
 </p>
 <br />
 <p> &emsp; </p>
@@ -74,10 +76,16 @@ and again in the sharing tab [advanced sharing -> permissions -> add -> (sec gro
 
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/Q5NHIZw.jpeg" height="80%" width="80%" alt="drive remap"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+-Create a new Group Policy Object for the ADMINS and TEAM Organizational Units.<p></p>
+[start -> group policy management -> expand domain -> right-click OU -> "create GPO & link here"]<p></p>
+<p> &emsp; </p>
+-Edit the new GPOs to remap the network folder to be drive E: on clients.
+[right-click GPO -> edit -> user config -> preferences -> drive maps -> new -> mapped drive -> action: create -> location: \\dc\admins -> use first available: E -> show this drive -> common tab -> highlight item-level targeting -> new item (OU)]<p></p>
+<p> &emsp; </p>
+-Run "gpupdate /force" and a new E: drive is visible on client with the contents from the folders on the Domain Controller.
 </p>
 <br />
 <p> &emsp; </p>
