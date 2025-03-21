@@ -97,7 +97,7 @@ and again in the sharing tab [advanced sharing -> permissions -> add -> (sec gro
 <p>
 -Find different desktop wallpapers for the TEAM and ADMINS Organizational Units & place them in their respective folders.<p></p>
 -For simplicity save them as admin_wp.jpg and client_wp.jpg<p></p>
--Return to Group Policy Management and set wallpapers for OUs.
+-Return to Group Policy Management and set wallpapers for OUs.<p></p>
 [right-click GPO -> edit -> user config -> admin templates -> desktop -> desktop -> desktop wallpaper -> enable -> wallpaper name: \\dc\admin_wp.jpg]<p></p>
 <p> &emsp; </p>
 -Repeate for TEAM GPO and restart the machines.<p></p>
