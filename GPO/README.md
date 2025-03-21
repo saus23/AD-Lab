@@ -82,7 +82,7 @@ and again in the sharing tab [advanced sharing -> permissions -> add -> (sec gro
 -Create a new Group Policy Object for the ADMINS and TEAM Organizational Units.<p></p>
 [start -> group policy management -> expand domain -> right-click OU -> "create GPO & link here"]<p></p>
 <p> &emsp; </p>
--Edit the new GPOs to remap the network folder to be drive E: on clients.
+-Edit the new GPOs to remap the network folder to be drive E: on clients.<p></p>
 [right-click GPO -> edit -> user config -> preferences -> drive maps -> new -> mapped drive -> action: create -> location: \\dc\admins -> use first available: E -> show this drive -> common tab -> highlight item-level targeting -> new item (OU)]<p></p>
 <p> &emsp; </p>
 -Run "gpupdate /force" and a new E: drive is visible on client with the contents from the folders on the Domain Controller.
