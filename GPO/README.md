@@ -92,9 +92,15 @@ and again in the sharing tab [advanced sharing -> permissions -> add -> (sec gro
 <p> &emsp; </p>
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/Wb8vafY.jpeg" height="80%" width="80%" alt="wallpapers"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+-Find different desktop wallpapers for the TEAM and ADMINS Organizational Units & place them in their respective folders.<p></p>
+-For simplicity save them as admin_wp.jpg and client_wp.jpg<p></p>
+-Return to Group Policy Management and set wallpapers for OUs.
+[right-click GPO -> edit -> user config -> admin templates -> desktop -> desktop -> desktop wallpaper -> enable -> wallpaper name: \\dc\admin_wp.jpg]<p></p>
+<p> &emsp; </p>
+-Repeate for TEAM GPO and restart the machines.<p></p>
+-The machines will now show a background based on the OU of the user.
 </p>
 <br />
