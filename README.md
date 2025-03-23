@@ -63,7 +63,6 @@ Configuring the Azure environment for Active Directory.<br />
 - Set the Domain Controller VM's IP to be static since it will be the DNS server for our client.<p></p>
 [VM -> networking -> network settings -> NIC -> ipconfig1 -> static & save] <p></p>
 <p> &emsp; </p>
-
 - Take note of the domain controller's private IP.
 </p>
 <br />
@@ -80,7 +79,6 @@ Configuring the Azure environment for Active Directory.<br />
 - Set the client's DNS settings to point to DC's private address.<p></p>
 [VM -> networking -> network settings -> NIC -> DNS servers -> custom -> <DC's private> & save]<p></p>
 <p> &emsp; </p>
-
 - Restart the client VM to make sure changes went through.
 </p>
 <br />
