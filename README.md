@@ -1,6 +1,8 @@
 <p align="center">
 <img src="https://i.imgur.com/pU5A58S.png" alt="Microsoft Active Directory Logo"/>
 </p>
+<p> &emsp; </p>
+
 
 <h1>Active Directory Azure configuration</h1>
 Configuring the Azure environment for Active Directory.<br />
