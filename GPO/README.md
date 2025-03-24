@@ -1,6 +1,8 @@
 <p align="center">
 <img src="https://i.imgur.com/pU5A58S.png" alt="Microsoft Active Directory Logo"/>
 </p>
+<p> &emsp; </p>
+
 
 <h1>Group Policy Objects and Organizational Units</h1>
 Organizational Units & Group Policy Objects usage.<br />
