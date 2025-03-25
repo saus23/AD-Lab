@@ -110,5 +110,5 @@ Configuring the Azure environment for Active Directory.<br />
 </p>
 <p>
 - Ping the Domain VM's private IP again to confirm the client VM has local network access to it.<p></p>
-- It should now succeed, and we can move onto Installing AD
+- It should now succeed, and we can move onto <a href="https://github.com/saus23/AD-Lab/tree/main/implementation"> Installing AD</a>
 <br />
