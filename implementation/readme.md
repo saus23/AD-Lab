@@ -96,7 +96,7 @@ Syntax: [user@domain.local] or [domain.local\user] <p></p>
 - Login to the client using the admin user and allow client access to non-administrator users.<p></p>
 [start -> system -> remote desktop -> select users -> add -> "Domain Users"]<p></p>
 <p> &emsp; </p>
-- Normal users and admins are now able to use the client.
+- Normal users and admins are now able to use the client, and we can move onto <a href="https://github.com/saus23/AD-Lab/tree/main/GPO"> using GPOs.</a>
 </p>
 <br />
 
