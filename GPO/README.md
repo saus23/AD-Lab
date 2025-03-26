@@ -49,7 +49,8 @@ Organizational Units & Group Policy Objects usage.<br />
 <p>
 - Create 2 new folders inside the C: drive on the Domain Controller, "admins" and "teams".<p></p>
 - Share both folders on the network.<p></p>
-[right click -> properties -> sharing -> share -> share]
+
+>right click -> properties -> sharing -> share -> share
 </p>
 <br />
 <p> &emsp; </p>
@@ -62,12 +63,17 @@ Organizational Units & Group Policy Objects usage.<br />
 </p>
 <p>
 - Create security groups for the ADMINS and TEAM Organizational Units.<p></p>
-[right-click the appropriate OU -> new -> group -> "admin_sec" & repeat for "team_sec"]
+
+>right-click the appropriate OU -> new -> group -> "admin_sec" & repeat for "team_sec"
 <p> &emsp; </p>
 - Add the members of the team OU to the team_sec group, and repeat for the admin_sec group.<p></p>
 - Go back to the C: drive and set the new sec groups to their respective folders.<p></p>
-[right-click -> security -> edit -> add -> (sec group)] & set allow Full control.<p>
-and again in the sharing tab [advanced sharing -> permissions -> add -> (sec group)]<p></p>
+
+>right-click -> security -> edit -> add -> (sec group) & set allow Full control.<p>
+
+and again in the sharing tab<p>
+
+>advanced sharing -> permissions -> add -> (sec group)<p></p>
 <p> &emsp; </p>
 - Restart the client for access to the new folders ("pgupdate /force" may work but I had no luck with it here).
 </p>
@@ -82,10 +88,12 @@ and again in the sharing tab [advanced sharing -> permissions -> add -> (sec gro
 </p>
 <p>
 - Create a new Group Policy Object for the ADMINS and TEAM Organizational Units.<p></p>
-[start -> group policy management -> expand domain -> right-click OU -> "create GPO & link here"]<p></p>
+
+>start -> group policy management -> expand domain -> right-click OU -> "create GPO & link here"<p></p>
 <p> &emsp; </p>
 - Edit the new GPOs to remap the network folder to be drive E: on clients.<p></p>
-[right-click GPO -> edit -> user config -> preferences -> drive maps -> new -> mapped drive -> action: create -> location: \\dc\admins -> use first available: E -> show this drive -> common tab -> highlight item-level targeting -> new item (OU)]<p></p>
+
+>right-click GPO -> edit -> user config -> preferences -> drive maps -> new -> mapped drive -> action: create -> location: \\dc\admins -> use first available: E -> show this drive -> common tab -> highlight item-level targeting -> new item (OU)<p></p>
 <p> &emsp; </p>
 - Run "gpupdate /force" and a new E: drive is visible on client with the contents from the folders on the Domain Controller.
 </p>
@@ -100,7 +108,8 @@ and again in the sharing tab [advanced sharing -> permissions -> add -> (sec gro
 - Find different desktop wallpapers for the TEAM and ADMINS Organizational Units & place them in their respective folders.<p></p>
 - For simplicity save them as admin_wp.jpg and client_wp.jpg<p></p>
 - Return to Group Policy Management and set wallpapers for OUs.<p></p>
-[right-click GPO -> edit -> user config -> admin templates -> desktop -> desktop -> desktop wallpaper -> enable -> wallpaper name: \\dc\admin_wp.jpg]<p></p>
+
+>right-click GPO -> edit -> user config -> admin templates -> desktop -> desktop -> desktop wallpaper -> enable -> wallpaper name: \\dc\admin_wp.jpg<p></p>
 <p> &emsp; </p>
 - Repeate for TEAM GPO and restart the machines.<p></p>
 - The machines will now show a background based on the OU of the user.
